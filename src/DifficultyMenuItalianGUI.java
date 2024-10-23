@@ -10,10 +10,12 @@
 public class DifficultyMenuItalianGUI extends javax.swing.JFrame {
 
     /**
-     * Creates new form DifficultyMenuItalian
+     * Creates new form DifficultyMenuItalianGUI
      */
     public DifficultyMenuItalianGUI() {
         initComponents();
+        setSize(600, 500);
+    setResizable(false);
     }
 
     /**
@@ -30,11 +32,9 @@ public class DifficultyMenuItalianGUI extends javax.swing.JFrame {
         HardButton = new javax.swing.JButton();
         PleaseSelectDifficultyText = new javax.swing.JLabel();
         LanguageLearningGameTitle = new javax.swing.JLabel();
-        EasyButton1 = new javax.swing.JButton();
-        MediumButton1 = new javax.swing.JButton();
-        HardButton1 = new javax.swing.JButton();
-        PleaseSelectDifficultyText1 = new javax.swing.JLabel();
-        LanguageLearningGameTitle1 = new javax.swing.JLabel();
+        BackToMenu = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         EasyButton.setText("Easy");
         EasyButton.addActionListener(new java.awt.event.ActionListener() {
@@ -60,71 +60,56 @@ public class DifficultyMenuItalianGUI extends javax.swing.JFrame {
         PleaseSelectDifficultyText.setText("Please Select Difficulty");
 
         LanguageLearningGameTitle.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        LanguageLearningGameTitle.setText("Spanish Learning Game");
+        LanguageLearningGameTitle.setText("Italian Learning Game");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        EasyButton1.setText("Easy");
-        EasyButton1.addActionListener(new java.awt.event.ActionListener() {
+        BackToMenu.setText("Back To Main Menu");
+        BackToMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EasyButton1ActionPerformed(evt);
+                BackToMenuActionPerformed(evt);
             }
         });
-
-        MediumButton1.setText("Medium");
-        MediumButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MediumButton1ActionPerformed(evt);
-            }
-        });
-
-        HardButton1.setText("Hard");
-        HardButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HardButton1ActionPerformed(evt);
-            }
-        });
-
-        PleaseSelectDifficultyText1.setText("Please Select Difficulty");
-
-        LanguageLearningGameTitle1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        LanguageLearningGameTitle1.setText("Italian Learning Game");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(118, Short.MAX_VALUE)
+                .addComponent(LanguageLearningGameTitle)
+                .addGap(108, 108, 108))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(LanguageLearningGameTitle1)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(207, 207, 207)
+                        .addComponent(PleaseSelectDifficultyText))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(238, 238, 238)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(HardButton1)
-                            .addComponent(MediumButton1)
-                            .addComponent(EasyButton1))
-                        .addGap(210, 210, 210))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(148, 148, 148)
-                .addComponent(PleaseSelectDifficultyText1)
+                            .addComponent(MediumButton)
+                            .addComponent(EasyButton)
+                            .addComponent(HardButton))))
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(BackToMenu)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(LanguageLearningGameTitle1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(PleaseSelectDifficultyText1)
-                .addGap(21, 21, 21)
-                .addComponent(EasyButton1)
+                .addGap(39, 39, 39)
+                .addComponent(LanguageLearningGameTitle)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PleaseSelectDifficultyText)
                 .addGap(18, 18, 18)
-                .addComponent(MediumButton1)
+                .addComponent(EasyButton)
                 .addGap(18, 18, 18)
-                .addComponent(HardButton1)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addComponent(MediumButton)
+                .addGap(18, 18, 18)
+                .addComponent(HardButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 230, Short.MAX_VALUE)
+                .addComponent(BackToMenu)
+                .addGap(25, 25, 25))
         );
 
         pack();
@@ -142,17 +127,11 @@ public class DifficultyMenuItalianGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_HardButtonActionPerformed
 
-    private void EasyButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EasyButton1ActionPerformed
+    private void BackToMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToMenuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_EasyButton1ActionPerformed
-
-    private void MediumButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MediumButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MediumButton1ActionPerformed
-
-    private void HardButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HardButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_HardButton1ActionPerformed
+        new MainMenuGUI().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BackToMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,34 +150,30 @@ public class DifficultyMenuItalianGUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DifficultyMenuItalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DifficultyMenuItalianGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DifficultyMenuItalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DifficultyMenuItalianGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DifficultyMenuItalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DifficultyMenuItalianGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DifficultyMenuItalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DifficultyMenuItalianGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DifficultyMenuItalian().setVisible(true);
+                new DifficultyMenuItalianGUI().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BackToMenu;
     private javax.swing.JButton EasyButton;
-    private javax.swing.JButton EasyButton1;
     private javax.swing.JButton HardButton;
-    private javax.swing.JButton HardButton1;
     private javax.swing.JLabel LanguageLearningGameTitle;
-    private javax.swing.JLabel LanguageLearningGameTitle1;
     private javax.swing.JButton MediumButton;
-    private javax.swing.JButton MediumButton1;
     private javax.swing.JLabel PleaseSelectDifficultyText;
-    private javax.swing.JLabel PleaseSelectDifficultyText1;
     // End of variables declaration//GEN-END:variables
 }

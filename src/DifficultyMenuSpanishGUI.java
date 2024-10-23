@@ -14,6 +14,8 @@ public class DifficultyMenuSpanishGUI extends javax.swing.JFrame {
      */
     public DifficultyMenuSpanishGUI() {
         initComponents();
+        setSize(600, 500);
+    setResizable(false);
     }
 
     /**
@@ -30,6 +32,7 @@ public class DifficultyMenuSpanishGUI extends javax.swing.JFrame {
         MediumButton = new javax.swing.JButton();
         HardButton = new javax.swing.JButton();
         PleaseSelectDifficultyText = new javax.swing.JLabel();
+        BackToMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,41 +62,55 @@ public class DifficultyMenuSpanishGUI extends javax.swing.JFrame {
 
         PleaseSelectDifficultyText.setText("Please Select Difficulty");
 
+        BackToMenu.setText("Back To Main Menu");
+        BackToMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackToMenuActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(39, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(LanguageLearningGameTitle)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(HardButton)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(233, 233, 233)
+                        .addComponent(PleaseSelectDifficultyText))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(258, 258, 258)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(MediumButton)
-                            .addComponent(EasyButton))
-                        .addGap(210, 210, 210))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(148, 148, 148)
-                .addComponent(PleaseSelectDifficultyText)
+                            .addComponent(EasyButton)
+                            .addComponent(HardButton))))
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(92, 92, 92)
+                        .addComponent(LanguageLearningGameTitle))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(BackToMenu)))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addGap(42, 42, 42)
                 .addComponent(LanguageLearningGameTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(PleaseSelectDifficultyText)
-                .addGap(21, 21, 21)
+                .addGap(18, 18, 18)
                 .addComponent(EasyButton)
                 .addGap(18, 18, 18)
                 .addComponent(MediumButton)
                 .addGap(18, 18, 18)
                 .addComponent(HardButton)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 210, Short.MAX_VALUE)
+                .addComponent(BackToMenu)
+                .addGap(26, 26, 26))
         );
 
         pack();
@@ -110,6 +127,12 @@ public class DifficultyMenuSpanishGUI extends javax.swing.JFrame {
     private void HardButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HardButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_HardButtonActionPerformed
+
+    private void BackToMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToMenuActionPerformed
+        // TODO add your handling code here:
+        new MainMenuGUI().setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_BackToMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,6 +170,7 @@ public class DifficultyMenuSpanishGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BackToMenu;
     private javax.swing.JButton EasyButton;
     private javax.swing.JButton HardButton;
     private javax.swing.JLabel LanguageLearningGameTitle;

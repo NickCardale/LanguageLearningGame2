@@ -14,6 +14,8 @@ public class MainMenuGUI extends javax.swing.JFrame {
      */
     public MainMenuGUI() {
         initComponents();
+        setSize(600, 500);
+    setResizable(false);
     }
 
     /**
