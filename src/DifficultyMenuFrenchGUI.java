@@ -16,6 +16,7 @@ public class DifficultyMenuFrenchGUI extends javax.swing.JFrame {
         initComponents();
         setSize(600, 500);
     setResizable(false);
+      setLocationRelativeTo(null);
     }
 
     /**

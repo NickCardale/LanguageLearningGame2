@@ -16,6 +16,7 @@ public class DifficultyMenuSpanishGUI extends javax.swing.JFrame {
         initComponents();
         setSize(600, 500);
     setResizable(false);
+      setLocationRelativeTo(null);
     }
 
     /**
@@ -118,14 +119,20 @@ public class DifficultyMenuSpanishGUI extends javax.swing.JFrame {
 
     private void EasyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EasyButtonActionPerformed
         // TODO add your handling code here:
+        new SpanishQuizEasyGUI().setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_EasyButtonActionPerformed
 
     private void MediumButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MediumButtonActionPerformed
         // TODO add your handling code here:
+        new SpanishQuizMediumGUI().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_MediumButtonActionPerformed
 
     private void HardButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HardButtonActionPerformed
         // TODO add your handling code here:
+        new SpanishQuizHardGUI().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_HardButtonActionPerformed
 
     private void BackToMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToMenuActionPerformed

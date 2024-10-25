@@ -9,6 +9,7 @@
  */
 public class MainMenuGUI extends javax.swing.JFrame {
 
+     private DatabaseCode dbCode;
     /**
      * Creates new form MainMenuGUI
      */
@@ -16,6 +17,7 @@ public class MainMenuGUI extends javax.swing.JFrame {
         initComponents();
         setSize(600, 500);
     setResizable(false);
+      setLocationRelativeTo(null);
     }
 
     /**
@@ -32,6 +34,8 @@ public class MainMenuGUI extends javax.swing.JFrame {
         FrenchQuizButton = new javax.swing.JButton();
         ItalianQuizButton = new javax.swing.JButton();
         PleaseSelectQuizLabel = new javax.swing.JLabel();
+        ButtonToScoresPage = new javax.swing.JButton();
+        ExitProgramButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,6 +65,21 @@ public class MainMenuGUI extends javax.swing.JFrame {
 
         PleaseSelectQuizLabel.setText("Please Select a Quiz Language");
 
+        ButtonToScoresPage.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        ButtonToScoresPage.setText("Scores");
+        ButtonToScoresPage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonToScoresPageActionPerformed(evt);
+            }
+        });
+
+        ExitProgramButton.setText("Exit Game");
+        ExitProgramButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitProgramButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -71,14 +90,18 @@ public class MainMenuGUI extends javax.swing.JFrame {
                         .addGap(63, 63, 63)
                         .addComponent(LanguageLearningGameTitle))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(197, 197, 197)
+                        .addComponent(PleaseSelectQuizLabel))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(245, 245, 245)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(FrenchQuizButton)
                             .addComponent(SpanishQuizButton)
-                            .addComponent(ItalianQuizButton)))
+                            .addComponent(ItalianQuizButton)
+                            .addComponent(ButtonToScoresPage)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(197, 197, 197)
-                        .addComponent(PleaseSelectQuizLabel)))
+                        .addGap(21, 21, 21)
+                        .addComponent(ExitProgramButton)))
                 .addContainerGap(88, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -94,7 +117,11 @@ public class MainMenuGUI extends javax.swing.JFrame {
                 .addComponent(FrenchQuizButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ItalianQuizButton)
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(ButtonToScoresPage)
+                .addGap(18, 18, 18)
+                .addComponent(ExitProgramButton)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();
@@ -117,6 +144,17 @@ public class MainMenuGUI extends javax.swing.JFrame {
         new DifficultyMenuItalianGUI().setVisible(true);
     this.dispose();
     }//GEN-LAST:event_ItalianQuizButtonActionPerformed
+
+    private void ButtonToScoresPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonToScoresPageActionPerformed
+        // TODO add your handling code here:
+        new ScoresGUI().setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_ButtonToScoresPageActionPerformed
+
+    private void ExitProgramButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitProgramButtonActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_ExitProgramButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -154,6 +192,8 @@ public class MainMenuGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonToScoresPage;
+    private javax.swing.JButton ExitProgramButton;
     private javax.swing.JButton FrenchQuizButton;
     private javax.swing.JButton ItalianQuizButton;
     private javax.swing.JLabel LanguageLearningGameTitle;
