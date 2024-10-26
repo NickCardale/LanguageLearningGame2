@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
+// chatgpt helped debug this page
 public class DatabaseCode {
     private static final String DB_URL = "jdbc:derby://localhost:1527/ScoresDB";
     private static final String DB_USER = "name";

@@ -1,5 +1,9 @@
 package languagelearninggame2;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -11,7 +15,7 @@ package languagelearninggame2;
  */
 public class MainMenuGUI extends javax.swing.JFrame {
 
-     private DatabaseCode dbCode;
+     private final DatabaseCode databaseCode = new DatabaseCode();
     /**
      * Creates new form MainMenuGUI
      */
